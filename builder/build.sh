@@ -63,8 +63,8 @@ tar -xf "$FILENAME" -C "${BUILD_PATH}"
 FILENAME=/workspace/$KERNEL_ARTIFACT
 if [ ! -f "$FILENAME" ]; then
   if [ "$FETCH_MISSING_ARTIFACTS" == "true" ]; then
-    fetch --repo="https://github.com/DieterReuter/rpi64-kernel" --tag="v$KERNEL_BUILD" --release-asset="$KERNEL_VERSION-hypriotos-v8.tar.gz.sha256" /workspace
-    fetch --repo="https://github.com/DieterReuter/rpi64-kernel" --tag="v$KERNEL_BUILD" --release-asset="$KERNEL_VERSION-hypriotos-v8.tar.gz" /workspace
+    fetch --repo="https://github.com/argent-smith/rpi64-kernel" --tag="v$KERNEL_BUILD" --release-asset="$KERNEL_VERSION-hypriotos-v8.tar.gz.sha256" /workspace
+    fetch --repo="https://github.com/argent-smith/rpi64-kernel" --tag="v$KERNEL_BUILD" --release-asset="$KERNEL_VERSION-hypriotos-v8.tar.gz" /workspace
   else
     echo "Missing artifact ${KERNEL_ARTIFACT}"
     exit 255
